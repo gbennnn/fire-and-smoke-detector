@@ -1,3 +1,5 @@
+```
+
 iot-fire-smoke-detector/
 │
 ├── 📁 docs/                     # Semua dokumentasi proyek
@@ -21,14 +23,14 @@ iot-fire-smoke-detector/
 ├── 📁 firmware/                # Kode ESP32 dan konfigurasi
 │   ├── src/
 │   │   ├── main.ino            # Program utama ESP32
-│   │   ├── wifi_config.h       # Konfigurasi WiFi
-│   │   └── ifttt_handler.cpp   # Integrasi IFTTT (jika digunakan)
+│   │   ├── wifi\_config.h       # Konfigurasi WiFi
+│   │   └── ifttt\_handler.cpp   # Integrasi IFTTT (jika digunakan)
 │   └── README.md               # Petunjuk flash kode ke ESP32
 │
 ├── 📁 cloud/                   # Konfigurasi platform IoT
-│   ├── ifttt_webhook.json     # Contoh webhook IFTTT
-│   ├── firebase_config.json   # Config Firebase (opsional)
-│   └── mqtt_example.md        # Petunjuk setup MQTT (opsional)
+│   ├── ifttt\_webhook.json     # Contoh webhook IFTTT
+│   ├── firebase\_config.json   # Config Firebase (opsional)
+│   └── mqtt\_example.md        # Petunjuk setup MQTT (opsional)
 │
 ├── 📁 test/                    # Hasil pengujian mingguan
 │   ├── minggu2-uji-sensor.md  # Dokumentasi uji komponen
@@ -36,6 +38,9 @@ iot-fire-smoke-detector/
 │   ├── minggu5-integrasi.md   # Hasil integrasi sistem
 │   └── minggu6-uji-lapangan.md# Pengujian di lokasi nyata
 │
-├── .gitignore
-├── README.md                  # Penjelasan umum proyek
-└── LICENSE                    # Lisensi proyek (misal MIT)
+├── .gitignore                  # File untuk mengecualikan file dari Git
+├── README.md                   # Penjelasan umum proyek
+└── LICENSE                     # Lisensi proyek (misal MIT)
+
+```
+
