@@ -49,10 +49,10 @@ Proyek ini dilisensikan di bawah MIT License. Silakan gunakan dan modifikasi den
 
 ---
 
-📍 *Dibuat oleh Kelompok 12:*
+📍 **Dibuat oleh Kelompok 12:**
 1. Benony Gabriel (NIM: 105222002)
 2. Senopati Baruna Pasha (NIM: 10522023)
 
-*Universitas Pertamina, 2025*
+**Universitas Pertamina, 2025**
 
 
