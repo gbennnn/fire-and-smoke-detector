@@ -6,7 +6,7 @@ Proyek ini merupakan bagian dari tugas kuliah Internet of Things (IoT) yang bert
 
 - Mendeteksi asap dan/atau api di lingkungan sekitar menggunakan sensor MQ2 dan flame sensor.
 - Mengirimkan peringatan (alert) ke pengguna secara real-time menggunakan internet.
-- Menyertakan lokasi kejadian (opsional) melalui integrasi dengan Google Maps API.
+- Menyertakan lokasi kejadian melalui integrasi dengan Google Maps API.
 - Mendukung kontrol dan monitoring jarak jauh melalui platform seperti IFTTT, Firebase, atau Blynk.
 
 ## 📦 Komponen yang Digunakan
@@ -20,24 +20,24 @@ Proyek ini merupakan bagian dari tugas kuliah Internet of Things (IoT) yang bert
 | Breadboard     | Perakitan sementara                      |
 | Kabel jumper   | Koneksi antar komponen                   |
 | IFTTT          | Pengiriman notifikasi otomatis           |
-| Firebase/Blynk | (Opsional) Integrasi cloud & kontrol     |
 
 ## 🧱 Diagram Sistem Blok
 
 Perangkat keras (sensor dan ESP32) → Internet → Platform Cloud (IFTTT, Firebase) → Pengguna (notifikasi / dashboard)
+![ilustrasi-sistem](https://github.com/user-attachments/assets/74561261-8761-4fba-a36f-11b768b13613)
 
-(Lihat diagram pada folder `images/sistem-blok.png`)
+
 
 ## 📅 Timeline Proyek
 
-Proyek ini dilaksanakan dalam 7 minggu:
-1. Ideasi dan perencanaan proyek
-2. Pengadaan & pengujian komponen
-3. Koneksi internet & cloud integration
-4. Fitur kendali jarak jauh
-5. Integrasi sistem dan optimasi
-6. Finalisasi perangkat & uji lapangan
-7. Dokumentasi, laporan, dan presentasi
+Proyek ini dilaksanakan dalam 7 minggu: <br>
+✅ Ideasi dan perencanaan proyek <br>
+🔳 Pengadaan & pengujian komponen <br>
+🔳 Koneksi internet & cloud integration <br>
+🔳 Fitur kendali jarak jauh <br>
+🔳 Integrasi sistem dan optimasi <br>
+🔳 Finalisasi perangkat & uji lapangan <br>
+🔳 Dokumentasi, laporan, dan presentasi <br>
 
 Detail per minggu tersedia pada folder [`test/`](./test)
 
