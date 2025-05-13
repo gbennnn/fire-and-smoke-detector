@@ -25,8 +25,7 @@ Proyek ini merupakan bagian dari tugas kuliah Internet of Things (IoT) yang bert
 ## 🧱 Diagram Sistem Blok
 
 Perangkat keras (sensor dan ESP32) → Internet → Platform Cloud (IFTTT, Firebase) → Pengguna (notifikasi / dashboard)
-
-(Lihat diagram pada folder `images/sistem-blok.png`)
+![Diagram IoT](images/ilustrasi-sistem.png)
 
 ## 📅 Timeline Proyek
 
