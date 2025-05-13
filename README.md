@@ -15,8 +15,8 @@ Proyek ini merupakan bagian dari tugas kuliah Internet of Things (IoT) yang bert
 |----------------|------------------------------------------|
 | ESP32          | Mikrokontroler utama (WiFi + kontrol)    |
 | MQ2            | Sensor pendeteksi gas/asap               |
-| Buzzer         | Menghasilkan bunyi sebagai alarm         |
 | Flame Sensor   | Sensor pendeteksi api                    |
+| Buzzer         | Menghasilkan bunyi sebagai alarm         |
 | Breadboard     | Perakitan sementara                      |
 | Kabel jumper   | Koneksi antar komponen                   |
 | IFTTT          | Pengiriman notifikasi otomatis           |
