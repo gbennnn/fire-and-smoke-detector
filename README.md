@@ -30,14 +30,14 @@ Perangkat keras (sensor dan ESP32) → Internet → Platform Cloud (IFTTT, Fireb
 
 ## 📅 Timeline Proyek
 
-Proyek ini dilaksanakan dalam 7 minggu: <br>
-✅ Ideasi dan perencanaan proyek <br>
-🔳 Pengadaan & pengujian komponen <br>
-🔳 Koneksi internet & cloud integration <br>
-🔳 Fitur kendali jarak jauh <br>
-🔳 Integrasi sistem dan optimasi <br>
-🔳 Finalisasi perangkat & uji lapangan <br>
-🔳 Dokumentasi, laporan, dan presentasi <br>
+Proyek ini dilaksanakan dalam 7 minggu:
+- ✅ Ideasi dan perencanaan proyek 
+- 🔳 Pengadaan & pengujian komponen 
+- 🔳 Koneksi internet & cloud integration 
+- 🔳 Fitur kendali jarak jauh 
+- 🔳 Integrasi sistem dan optimasi
+- 🔳 Finalisasi perangkat & uji lapangan 
+- 🔳 Dokumentasi, laporan, dan presentasi
 
 Detail per minggu tersedia pada folder [`test/`](./test)
 
