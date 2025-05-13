@@ -16,7 +16,7 @@
 | Minggu | Kegiatan                                  | Status       | Keterangan                                                                 |
 |--------|-------------------------------------------|--------------|------------------------------------------------------------------------------|
 | 1      | Ideasi dan perencanaan proyek             | ✅ Selesai    | Penentuan fitur utama, skema sistem, dan pembagian tugas.                   |
-| 2      | Pengadaan & pengujian komponen            | 🔄 Sedang    | Telah dilakukan pembelian sensor MQ-2, NodeMCU, kabel, dan uji konektivitas.|
+| 2      | Pengadaan & pengujian komponen            | 🔄 Sedang    | Sedang dalam pengadaan flame sensor (sensor deteksi api)|
 | 3      | Koneksi internet & cloud integration      | ⏳ Belum    | Akan dimulai setelah semua komponen yang dibutuhkan sudah siap                      |
 | 4      | Fitur kendali jarak jauh                  | ⏳ Belum     | Akan dimulai setelah membuat rangkaian                            |
 | 5      | Integrasi sistem dan optimasi             | ⏳ Belum      | Akan dimulai setelah fitur kendali selesai.                                 |
@@ -33,7 +33,7 @@
 - ✅ Penyusunan jadwal dan timeline proyek.
 
 ### Minggu 2 - Pengadaan & Pengujian Komponen
-- 🔄 Sedang dalam proses pengadaan sensor asap MQ-2 dan flame sensor (sensor api).
+- 🔄 Sedang dalam proses pengadaan flame sensor (sensor api).
 - ⏳ *(Belum dimulai)* Pengujian awal sensor dan konektivitas modul ESP32.
 - ⚠️ Ditemukan keterlambatan pengiriman komponen tambahan.
 
@@ -60,10 +60,10 @@
 ---
 
 ## Kendala
-- 📦 Keterlambatan pengiriman modul relay dan sensor temperatur.
-- 📶 Gangguan jaringan WiFi saat integrasi dengan cloud.
+- 📦 Keterlambatan pengadaan sensor flame.
 
 ## Rencana Minggu Berikutnya
+- Mulai membuat rangkaian sistem
 - Selesaikan fitur kendali jarak jauh.
 - Mulai integrasi sistem secara keseluruhan.
 - Uji coba simulasi kebakaran dalam skala kecil.
@@ -71,4 +71,4 @@
 ---
 
 **Status Proyek Saat Ini:**  
-⏳ *Sedang berjalan - 55% selesai*
+⏳ *Sedang berjalan - 50% selesai*
