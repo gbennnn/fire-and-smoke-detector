@@ -7,7 +7,7 @@ Proyek ini merupakan bagian dari tugas kuliah Internet of Things (IoT) yang bert
 - Mendeteksi asap dan/atau api di lingkungan sekitar menggunakan sensor MQ2 dan flame sensor.
 - Mengirimkan peringatan (alert) ke pengguna secara real-time menggunakan internet.
 - Menyertakan lokasi kejadian melalui integrasi dengan Google Maps API.
-- Mendukung kontrol dan monitoring jarak jauh melalui platform seperti IFTTT, Firebase, atau Blynk.
+- Mendukung kontrol dan monitoring jarak jauh.
 
 ## 📦 Komponen yang Digunakan
 
@@ -19,7 +19,6 @@ Proyek ini merupakan bagian dari tugas kuliah Internet of Things (IoT) yang bert
 | Buzzer         | Menghasilkan bunyi sebagai alarm         |
 | Breadboard     | Perakitan sementara                      |
 | Kabel jumper   | Koneksi antar komponen                   |
-| IFTTT          | Pengiriman notifikasi otomatis           |
 
 ## 🧱 Diagram Sistem Blok
 
