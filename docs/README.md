@@ -6,8 +6,8 @@
 **Durasi Proyek:** 7 Minggu  
 **Tanggal Laporan:** 13 Mei 2025  
 **Tim:**  
-- Benony Gabriel  
-- [Nama Anggota Lain, jika ada]
+- Benony Gabriel (NIM: 105222002)
+- Senopati Baruna Pasha (NIM: 105222023)
 
 ---
 
@@ -16,9 +16,9 @@
 | Minggu | Kegiatan                                  | Status       | Keterangan                                                                 |
 |--------|-------------------------------------------|--------------|------------------------------------------------------------------------------|
 | 1      | Ideasi dan perencanaan proyek             | ✅ Selesai    | Penentuan fitur utama, skema sistem, dan pembagian tugas.                   |
-| 2      | Pengadaan & pengujian komponen            | ✅ Selesai    | Telah dilakukan pembelian sensor MQ-2, NodeMCU, kabel, dan uji konektivitas.|
-| 3      | Koneksi internet & cloud integration      | ✅ Selesai    | Berhasil mengirim data dari NodeMCU ke platform cloud.                      |
-| 4      | Fitur kendali jarak jauh                  | 🔄 Sedang     | Pengendalian buzzer via app sedang dikembangkan.                            |
+| 2      | Pengadaan & pengujian komponen            | 🔄 Sedang    | Sedang dalam pengadaan flame sensor (sensor deteksi api)|
+| 3      | Koneksi internet & cloud integration      | ⏳ Belum    | Akan dimulai setelah semua komponen yang dibutuhkan sudah siap                      |
+| 4      | Fitur kendali jarak jauh                  | ⏳ Belum     | Akan dimulai setelah membuat rangkaian                            |
 | 5      | Integrasi sistem dan optimasi             | ⏳ Belum      | Akan dimulai setelah fitur kendali selesai.                                 |
 | 6      | Finalisasi perangkat & uji lapangan       | ⏳ Belum      | Direncanakan uji indoor dan outdoor.                                        |
 | 7      | Dokumentasi, laporan, dan presentasi      | ⏳ Belum      | Akan mulai penulisan dan persiapan presentasi akhir.                        |
@@ -33,19 +33,17 @@
 - ✅ Penyusunan jadwal dan timeline proyek.
 
 ### Minggu 2 - Pengadaan & Pengujian Komponen
-- ✅ Pengadaan sensor asap MQ-2, NodeMCU ESP8266, dan buzzer.
-- ✅ Pengujian awal sensor dan konektivitas modul ESP8266.
+- 🔄 Sedang dalam proses pengadaan flame sensor (sensor api).
+- ⏳ *(Belum dimulai)* Pengujian awal sensor dan konektivitas modul ESP32.
 - ⚠️ Ditemukan keterlambatan pengiriman komponen tambahan.
 
 ### Minggu 3 - Koneksi Internet & Cloud Integration
-- ✅ Konfigurasi koneksi WiFi pada NodeMCU.
-- ✅ Integrasi awal dengan platform cloud (Blynk/MQTT/Firebase).
-- ✅ Pengiriman data sensor berhasil ditampilkan secara online.
+- ⏳ *Belum dimulai.*  
+- Catatan: Akan dilakukan setelah semua fitur dasar selesai.
 
 ### Minggu 4 - Fitur Kendali Jarak Jauh
-- 🔄 Sedang dalam proses pengembangan:
-  - Pengendalian buzzer melalui aplikasi mobile.
-  - Penambahan tombol emergency shutdown.
+- ⏳ *Belum dimulai.*  
+- Catatan: Akan dilakukan setelah semua fitur dasar selesai.
 
 ### Minggu 5 - Integrasi Sistem dan Optimasi
 - ⏳ *Belum dimulai.*  
@@ -62,10 +60,10 @@
 ---
 
 ## Kendala
-- 📦 Keterlambatan pengiriman modul relay dan sensor temperatur.
-- 📶 Gangguan jaringan WiFi saat integrasi dengan cloud.
+- 📦 Keterlambatan pengadaan sensor flame.
 
 ## Rencana Minggu Berikutnya
+- Mulai membuat rangkaian sistem
 - Selesaikan fitur kendali jarak jauh.
 - Mulai integrasi sistem secara keseluruhan.
 - Uji coba simulasi kebakaran dalam skala kecil.
@@ -73,4 +71,4 @@
 ---
 
 **Status Proyek Saat Ini:**  
-⏳ *Sedang berjalan - 55% selesai*
+⏳ *Sedang berjalan - 50% selesai*

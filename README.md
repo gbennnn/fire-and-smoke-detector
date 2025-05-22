@@ -1,4 +1,4 @@
-# 🔥 IoT Fire and Smoke Detector
+# 🔥 Fire and Smoke Detector
 
 Proyek ini merupakan bagian dari tugas kuliah Internet of Things (IoT) yang bertujuan untuk mendeteksi asap dan api menggunakan sensor dan mengirimkan peringatan beserta lokasi melalui internet. Proyek ini juga mendukung Tujuan Pembangunan Berkelanjutan (Sustainable Development Goals / SDG) nomor 11: **Sustainable Cities and Communities**.
 
@@ -7,7 +7,7 @@ Proyek ini merupakan bagian dari tugas kuliah Internet of Things (IoT) yang bert
 - Mendeteksi asap dan/atau api di lingkungan sekitar menggunakan sensor MQ2 dan flame sensor.
 - Mengirimkan peringatan (alert) ke pengguna secara real-time menggunakan internet.
 - Menyertakan lokasi kejadian melalui integrasi dengan Google Maps API.
-- Mendukung kontrol dan monitoring jarak jauh melalui platform seperti IFTTT, Firebase, atau Blynk.
+- Mendukung kontrol dan monitoring jarak jauh.
 
 ## 📦 Komponen yang Digunakan
 
@@ -15,15 +15,14 @@ Proyek ini merupakan bagian dari tugas kuliah Internet of Things (IoT) yang bert
 |----------------|------------------------------------------|
 | ESP32          | Mikrokontroler utama (WiFi + kontrol)    |
 | MQ2            | Sensor pendeteksi gas/asap               |
-| Buzzer         | Menghasilkan bunyi sebagai alarm         |
 | Flame Sensor   | Sensor pendeteksi api                    |
+| Buzzer         | Menghasilkan bunyi sebagai alarm         |
 | Breadboard     | Perakitan sementara                      |
 | Kabel jumper   | Koneksi antar komponen                   |
-| IFTTT          | Pengiriman notifikasi otomatis           |
 
 ## 🧱 Diagram Sistem Blok
 
-Perangkat keras (sensor dan ESP32) → Internet → Platform Cloud (IFTTT, Firebase) → Pengguna (notifikasi / dashboard)
+Perangkat keras (sensor dan ESP32) → Internet → Pengguna (notifikasi / dashboard)
 ![ilustrasi-sistem](https://github.com/user-attachments/assets/74561261-8761-4fba-a36f-11b768b13613)
 
 
