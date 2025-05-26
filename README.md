@@ -34,7 +34,7 @@ Perangkat keras (sensor dan ESP32) → Internet → Pengguna (notifikasi / dashb
 
 Proyek ini dilaksanakan dalam 7 minggu: <br>
 ✅ Ideasi dan perencanaan proyek <br>
-🔳 Pengadaan & pengujian komponen <br>
+✅ Pengadaan & pengujian komponen <br>
 🔳 Koneksi internet & cloud integration <br>
 🔳 Fitur kendali jarak jauh <br>
 🔳 Integrasi sistem dan optimasi <br>
