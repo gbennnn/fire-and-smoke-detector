@@ -1,4 +1,4 @@
-# Fire and Smoke Detection - Kelompok 12
+# Fire and Smoke Detection - Kelompok 12 (versi revisi)
 
 try:
     import usocket as socket
@@ -43,11 +43,11 @@ buzzer.duty(0)
 mq2_analog = ADC(Pin(34))  # MQ2 ke pin analog
 mq2_analog.atten(ADC.ATTN_11DB)
 
-flame_digital = Pin(13, Pin.IN)  # Gunakan GPIO13, bukan GPIO2
+flame_digital = Pin(13, Pin.IN)  # Sensor flame di GPIO13
 
 # === Fungsi Deteksi ===
 def read_flame():
-    return flame_digital.value()
+    return flame_digital.value()  # Flame sensor: 1 = api terdeteksi, 0 = tidak ada api
 
 def read_gas():
     return mq2_analog.read()
@@ -55,13 +55,13 @@ def read_gas():
 def activate_buzzer(active):
     buzzer.duty(512 if active else 0)
 
-# === Variabel Status ===
+# === Variabel Global ===
 status_api = "Tidak terdeteksi"
 status_asap = "Tidak terdeteksi"
 gas_value = 0
 data_log = []
 
-# === Update Sensor ===
+# === Update Sensor Secara Periodik ===
 async def update_sensor():
     global status_api, status_asap, gas_value, data_log
     while True:
@@ -69,17 +69,15 @@ async def update_sensor():
         gas = read_gas()
         gas_value = gas
 
-        # Debugging print
-        print("Raw flame sensor value:", flame)
-
-        status_api = "TERDETEKSI!" if flame == 0 else "Tidak terdeteksi"
+        # Logika: flame == 1 artinya api TERDETEKSI
+        status_api = "TERDETEKSI!" if flame == 1 else "Tidak terdeteksi"
         status_asap = "TERDETEKSI!" if gas > 800 else "Tidak terdeteksi"
 
-        activate_buzzer(flame == 0 or gas > 800)
+        activate_buzzer(flame == 1 or gas > 800)
 
         data_log.append({
             "gas": gas,
-            "flame": 0 if flame == 0 else 1
+            "flame": flame
         })
 
         if len(data_log) > 10:
@@ -88,53 +86,127 @@ async def update_sensor():
         print(f"[Sensor] Api: {status_api}, Gas: {gas} ({status_asap})")
         await asyncio.sleep(3)
 
-# === Halaman Web ===
+# === Halaman Web Sederhana ===
 def web_page():
-    return f"""
+    return """
+<!DOCTYPE html>
 <html>
 <head>
-    <title>Fire & Smoke Monitor</title>
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <title>Fire & Smoke Detection</title>
+    <style>
+        body { font-family: sans-serif; text-align: center; }
+        canvas { max-width: 600px; margin: 20px auto; }
+        .danger { color: red; font-weight: bold; }
+    </style>
 </head>
 <body>
-    <h2>🚨 Fire & Smoke Detection</h2>
-    <p>Status Api: <strong>{status_api}</strong></p>
-    <p>Status Asap: <strong>{status_asap}</strong></p>
-    <p>Gas Level (MQ2): <strong>{gas_value}</strong></p>
+    <h2>Fire & Smoke Monitor</h2>
+    <p>Status Api: <span id="status_api">Memuat...</span></p>
+    <p>Status Asap: <span id="status_asap">Memuat...</span></p>
+    <p>Gas Value: <span id="gas_value">-</span></p>
 
     <canvas id="gasChart"></canvas>
+    <canvas id="flameChart"></canvas>
 
+
+    <h2>Lokasi Kebakaran</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.89161242341785!2d106.7887656064085!3d-6.2286460054432355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f13094c83677%3A0x1f4300031365732b!2sUniversitas%20Pertamina!5e0!3m2!1sen!2sid!4v1748236595439!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-    const ctx = document.getElementById('gasChart').getContext('2d');
-    const chart = new Chart(ctx, {{
-        type: 'line',
-        data: {{
-            labels: [],
-            datasets: [{{
-                label: 'Gas Level',
-                borderColor: 'red',
-                data: [],
-                fill: false
-            }}]
-        }},
-        options: {{
-            responsive: true,
-            animation: false
-        }}
-    }});
+        const gasData = [];
+        const flameData = [];
+        const labels = [];
 
-    function fetchData() {{
-        fetch('/data')
-            .then(res => res.json())
-            .then(data => {{
-                chart.data.labels = data.map((_, i) => i + 1);
-                chart.data.datasets[0].data = data.map(d => d.gas);
-                chart.update();
-            }});
-    }}
+        const gasCtx = document.getElementById('gasChart').getContext('2d');
+        const flameCtx = document.getElementById('flameChart').getContext('2d');
 
-    setInterval(fetchData, 3000);
-    fetchData();
+        const gasChart = new Chart(gasCtx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Gas Value',
+                    data: gasData,
+                    borderColor: 'orange',
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: { beginAtZero: true }
+                }
+            }
+        });
+
+        const flameChart = new Chart(flameCtx, {
+            type: 'line',
+            data: {
+                labels: labels,
+                datasets: [{
+                    label: 'Flame',
+                    data: flameData,
+                    borderColor: 'red',
+                    fill: false
+                }]
+            },
+            options: {
+                responsive: true,
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        suggestedMax: 1
+                    }
+                }
+            }
+        });
+
+        async function fetchData() {
+            try {
+                const res = await fetch('/data');
+                const data = await res.json();
+
+                const latest = data[data.length - 1];
+                // Status Api
+                const statusApi = document.getElementById('status_api');
+                if (latest.flame) {
+                    statusApi.innerText = "TERDETEKSI!";
+                    statusApi.className = "danger";
+                } else {
+                    statusApi.innerText = "Tidak terdeteksi";
+                    statusApi.className = "";
+                }
+                // Status Asap
+                const statusAsap = document.getElementById('status_asap');
+                if (latest.gas > 800) {
+                    statusAsap.innerText = "TERDETEKSI!";
+                    statusAsap.className = "danger";
+                } else {
+                    statusAsap.innerText = "Tidak terdeteksi";
+                    statusAsap.className = "";
+                }
+                document.getElementById('gas_value').innerText = latest.gas;
+
+                const waktu = new Date().toLocaleTimeString();
+                if (labels.length > 10) {
+                    labels.shift();
+                    gasData.shift();
+                    flameData.shift();
+                }
+
+                labels.push(waktu);
+                gasData.push(latest.gas);
+                flameData.push(latest.flame);
+
+                gasChart.update();
+                flameChart.update();
+            } catch (e) {
+                console.error(e);
+            }
+        }
+
+        setInterval(fetchData, 3000); // Update setiap 3 detik
     </script>
 </body>
 </html>
@@ -143,7 +215,10 @@ def web_page():
 # === Web Server ===
 async def serve_client(reader, writer):
     request_line = await reader.readline()
-    request = str(request_line)
+    if not request_line:
+        return
+
+    request = request_line.decode()
     print("Request:", request)
 
     while await reader.readline() != b"\r\n":
@@ -161,9 +236,9 @@ async def serve_client(reader, writer):
     await writer.drain()
     await writer.aclose()
 
-# === Main Program ===
+# === Program Utama ===
 async def main():
-    print("Server aktif di http://%s" % station.ifconfig()[0])
+    print("🌐 Server aktif di http://%s" % station.ifconfig()[0])
     asyncio.create_task(update_sensor())
     server = await asyncio.start_server(serve_client, "0.0.0.0", 80)
     while True:
