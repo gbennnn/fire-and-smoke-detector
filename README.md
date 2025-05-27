@@ -27,7 +27,8 @@ Perangkat keras (sensor dan ESP32) → Internet → Pengguna (notifikasi / dashb
 
 <br>
 
-![blok-sistem](images/blok-sistem.jpg)
+![alur-kerja-sistem](https://github.com/user-attachments/assets/2ac163ac-b43f-4caf-80fc-f63012343f4d)
+
 
 
 ## 📅 Timeline Proyek
