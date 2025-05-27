@@ -42,7 +42,7 @@ Proyek ini dilaksanakan dalam 7 minggu: <br>
 🔳 Finalisasi perangkat & uji lapangan <br>
 🔳 Dokumentasi, laporan, dan presentasi <br>
 
-Tasks deadline:
+Tasks deadline: <br>
 ✅ Task 1 (topik dan repo) : https://forms.office.com/r/8tWUJSvWU9 <br>
 ✅ Task 2 (diagram blok sistem) :  25 Mei 2025 <br>
 🔳 Task 3 (desain sistem lengkap UI/UX software dan hardware) : 1 Juni 2025 <br>
