@@ -11,14 +11,14 @@ Proyek ini merupakan bagian dari tugas kuliah Internet of Things (IoT) yang bert
 
 ## 📦 Komponen yang Digunakan
 
-| Komponen       | Fungsi                                  |
-|----------------|------------------------------------------|
-| ESP32          | Mikrokontroler utama (WiFi + kontrol)    |
-| MQ2            | Sensor pendeteksi gas/asap               |
-| Flame Sensor   | Sensor pendeteksi api                    |
-| Buzzer         | Menghasilkan bunyi sebagai alarm         |
-| Breadboard     | Perakitan sementara                      |
-| Kabel jumper   | Koneksi antar komponen                   |
+| Komponen     | Fungsi                                |
+| ------------ | ------------------------------------- |
+| ESP32        | Mikrokontroler utama (WiFi + kontrol) |
+| MQ2          | Sensor pendeteksi gas/asap            |
+| Flame Sensor | Sensor pendeteksi api                 |
+| Buzzer       | Menghasilkan bunyi sebagai alarm      |
+| Breadboard   | Perakitan sementara                   |
+| Kabel jumper | Koneksi antar komponen                |
 
 ## 🧱 Diagram Sistem Blok
 
@@ -29,32 +29,17 @@ Perangkat keras (sensor dan ESP32) → Internet → Pengguna (notifikasi / dashb
 
 ![alur-kerja-sistem](https://github.com/user-attachments/assets/2ac163ac-b43f-4caf-80fc-f63012343f4d)
 
-
-
 ## 📅 Timeline Proyek
-
-Proyek ini dilaksanakan dalam 7 minggu: <br>
-✅ Ideasi dan perencanaan proyek <br>
-✅ Pengadaan & pengujian komponen <br>
-🔳 Koneksi internet & cloud integration <br>
-🔳 Fitur kendali jarak jauh <br>
-🔳 Integrasi sistem dan optimasi <br>
-🔳 Finalisasi perangkat & uji lapangan <br>
-🔳 Dokumentasi, laporan, dan presentasi <br>
 
 Tasks deadline: <br>
 ✅ Task 1 (topik dan repo) : https://forms.office.com/r/8tWUJSvWU9 <br>
-✅ Task 2 (diagram blok sistem) :  25 Mei 2025 <br>
+✅ Task 2 (diagram blok sistem) : 25 Mei 2025 <br>
 🔳 Task 3 (desain sistem lengkap UI/UX software dan hardware) : 1 Juni 2025 <br>
-🔳 Task 4 (Implementasi hardware) :  8 Juni 2025 <br>
+🔳 Task 4 (Implementasi hardware) : 8 Juni 2025 <br>
 🔳 Task 5 (Implementasi software) : 15 Juni 2025 <br>
 🔳 Task 6 (Integrasi software + hardware) : 22 Juni 2025 <br>
 🔳 Task 7 (Pengujian sistem dan penyempurnaan) : 29 Juni 2025 <br>
 🔳 Task 8 (Laporan akhir) via e learning : 6 Juli 2025 <br>
-
-
-## 📁 Struktur Direktori
-
 
 ## 📜 Lisensi
 
@@ -63,9 +48,8 @@ Proyek ini dilisensikan di bawah MIT License. Silakan gunakan dan modifikasi den
 ---
 
 📍 **Dibuat oleh Kelompok 12:**
+
 1. Benony Gabriel (NIM: 105222002)
 2. Senopati Baruna Pasha (NIM: 10522023)
 
 **Universitas Pertamina, 2025**
-
-
