@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fire & Smoke Detector</title>
+    <link
+      rel="shortcut icon"
+      href="../../../images/logo.png"
+      type="image/x-icon"
+    />
+    <style>
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+
+      body {
+        font-family: Arial, sans-serif;
+        background: #f9fafb;
+        color: #333;
+        line-height: 1.6;
+        padding: 20px;
+      }
+
+      header {
+        text-align: center;
+        margin-bottom: 20px;
+      }
+
+      header h1 {
+        font-size: 2rem;
+        color: #e11d48;
+      }
+
+      .container {
+        max-width: 900px;
+        margin: auto;
+        background: white;
+        padding: 20px;
+        border-radius: 12px;
+        box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+      }
+
+      .status {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+
+      .alert {
+        padding: 15px;
+        border-radius: 8px;
+        background-color: #fef3c7;
+        color: #92400e;
+        font-weight: bold;
+        display: none;
+      }
+
+      .active {
+        display: block;
+      }
+
+      .sensor {
+        display: flex;
+        justify-content: space-between;
+        background: #f3f4f6;
+        padding: 10px 15px;
+        border-radius: 8px;
+      }
+
+      iframe {
+        width: 100%;
+        height: 300px;
+        border: none;
+        border-radius: 12px;
+      }
+
+      @media (max-width: 600px) {
+        .sensor {
+          flex-direction: column;
+          gap: 10px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>🔥 Fire & Smoke Detector</h1>
+      <p>Monitoring asap dan api secara real-time</p>
+    </header>
+
+    <div class="container">
+      <div class="status">
+        <div id="fire-alert" class="alert">🚨 Api terdeteksi!</div>
+        <div id="smoke-alert" class="alert">🚨 Asap terdeteksi!</div>
+
+        <div class="sensor">
+          <span>Status Api:</span>
+          <span id="flame-status">Aman</span>
+        </div>
+
+        <div class="sensor">
+          <span>Status Asap:</span>
+          <span id="smoke-status">Aman</span>
+        </div>
+      </div>
+
+      <h3>📍 Lokasi Detektor</h3>
+      <iframe
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3966.266518867683!2d106.78640247492979!3d-6.2285506937595825!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f13094c83677%3A0x1f4300031365732b!2sUniversitas%20Pertamina!5e0!3m2!1sen!2sid!4v1748701615505!5m2!1sen!2sid"
+        width="600"
+        height="450"
+        style="border: 0"
+        allowfullscreen=""
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade"
+      ></iframe>
+    </div>
+
+    <script>
+      // Simulasi data sensor untuk demo
+      function simulateSensorData() {
+        const flameDetected = Math.random() < 0.2;
+        const smokeDetected = Math.random() < 0.3;
+
+        document.getElementById("flame-status").textContent = flameDetected
+          ? "Api terdeteksi!"
+          : "Aman";
+        document.getElementById("smoke-status").textContent = smokeDetected
+          ? "Asap terdeteksi!"
+          : "Aman";
+
+        document
+          .getElementById("fire-alert")
+          .classList.toggle("active", flameDetected);
+        document
+          .getElementById("smoke-alert")
+          .classList.toggle("active", smokeDetected);
+      }
+
+      setInterval(simulateSensorData, 5000); // Update setiap 5 detik
+    </script>
+  </body>
+</html>
