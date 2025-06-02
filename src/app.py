@@ -97,7 +97,6 @@ def web_page():
         body { font-family: sans-serif; text-align: center; }
         canvas { max-width: 600px; margin: 20px auto; }
         .danger { color: red; font-weight: bold; }
-        #map-container { display: none; margin-top: 24px; }
     </style>
 </head>
 <body>
@@ -109,10 +108,9 @@ def web_page():
     <canvas id="gasChart"></canvas>
     <canvas id="flameChart"></canvas>
 
-    <div id="map-container">
-        <h2>Lokasi Kebakaran</h2>
-        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.89161242341785!2d106.7887656064085!3d-6.2286460054432355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f13094c83677%3A0x1f4300031365732b!2sUniversitas%20Pertamina!5e0!3m2!1sen!2sid!4v1748236595439!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
+
+    <h2>Lokasi Kebakaran</h2>
+    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.89161242341785!2d106.7887656064085!3d-6.2286460054432355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f13094c83677%3A0x1f4300031365732b!2sUniversitas%20Pertamina!5e0!3m2!1sen!2sid!4v1748236595439!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
     
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
@@ -189,14 +187,6 @@ def web_page():
                     statusAsap.className = "";
                 }
                 document.getElementById('gas_value').innerText = latest.gas;
-
-                // Tampilkan map jika api/asap terdeteksi
-                const mapContainer = document.getElementById('map-container');
-                if (latest.flame || latest.gas > 800) {
-                    mapContainer.style.display = "block";
-                } else {
-                    mapContainer.style.display = "none";
-                }
 
                 const waktu = new Date().toLocaleTimeString();
                 if (labels.length > 10) {
