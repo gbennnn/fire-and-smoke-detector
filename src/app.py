@@ -30,11 +30,11 @@ start = time.time()
 timeout = 15
 while not station.isconnected():
     if time.time() - start > timeout:
-        print("❌ Gagal konek WiFi")
+        print("Gagal konek WiFi")
         break
 
 if station.isconnected():
-    print("✅ Koneksi sukses, IP:", station.ifconfig()[0])
+    print("Koneksi sukses, IP:", station.ifconfig()[0])
 
 # === Inisialisasi Sensor dan Buzzer ===
 buzzer = PWM(Pin(5), freq=1000)
@@ -97,6 +97,7 @@ def web_page():
         body { font-family: sans-serif; text-align: center; }
         canvas { max-width: 600px; margin: 20px auto; }
         .danger { color: red; font-weight: bold; }
+        #map-container { display: none; margin-top: 24px; }
     </style>
 </head>
 <body>
@@ -108,9 +109,10 @@ def web_page():
     <canvas id="gasChart"></canvas>
     <canvas id="flameChart"></canvas>
 
-
-    <h2>Lokasi Kebakaran</h2>
-    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.89161242341785!2d106.7887656064085!3d-6.2286460054432355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f13094c83677%3A0x1f4300031365732b!2sUniversitas%20Pertamina!5e0!3m2!1sen!2sid!4v1748236595439!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    <div id="map-container">
+        <h2>Lokasi Kebakaran</h2>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d247.89161242341785!2d106.7887656064085!3d-6.2286460054432355!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2e69f13094c83677%3A0x1f4300031365732b!2sUniversitas%20Pertamina!5e0!3m2!1sen!2sid!4v1748236595439!5m2!1sen!2sid" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </div>
     
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
@@ -188,6 +190,14 @@ def web_page():
                 }
                 document.getElementById('gas_value').innerText = latest.gas;
 
+                // Tampilkan map jika api/asap terdeteksi
+                const mapContainer = document.getElementById('map-container');
+                if (latest.flame || latest.gas > 800) {
+                    mapContainer.style.display = "block";
+                } else {
+                    mapContainer.style.display = "none";
+                }
+
                 const waktu = new Date().toLocaleTimeString();
                 if (labels.length > 10) {
                     labels.shift();
@@ -238,7 +248,7 @@ async def serve_client(reader, writer):
 
 # === Program Utama ===
 async def main():
-    print("🌐 Server aktif di http://%s" % station.ifconfig()[0])
+    print("Server aktif di http://%s" % station.ifconfig()[0])
     asyncio.create_task(update_sensor())
     server = await asyncio.start_server(serve_client, "0.0.0.0", 80)
     while True:
@@ -247,4 +257,4 @@ async def main():
 try:
     asyncio.run(main())
 except Exception as e:
-    print("❌ Error utama:", e)
+    print("Error utama:", e)
