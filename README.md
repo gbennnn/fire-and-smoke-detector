@@ -23,11 +23,11 @@ Proyek ini merupakan bagian dari tugas kuliah Internet of Things (IoT) yang bert
 ## 🧱 Diagram Sistem Blok
 
 Perangkat keras (sensor dan ESP32) → Internet → Pengguna (notifikasi / dashboard)
-![ilustrasi-sistem](https://github.com/user-attachments/assets/74561261-8761-4fba-a36f-11b768b13613)
+![ilustrasi-sistem](images/ilustrasi-sistem.png)
 
 <br>
 
-![alur-kerja-sistem](https://github.com/user-attachments/assets/2ac163ac-b43f-4caf-80fc-f63012343f4d)
+![alur-kerja-sistem](images/alur-blok-sistem.png)
 
 ## 📅 Timeline Proyek
 
