@@ -4,4 +4,4 @@
 
 ![ilustrasi-sistem](../../images/ilustrasi-sistem.png)
 
-![diagram-blok-sistem](../../images/alur-kerja-sistem.png)
+![diagram-blok-sistem](../../images/alur-blok-sistem.png)
