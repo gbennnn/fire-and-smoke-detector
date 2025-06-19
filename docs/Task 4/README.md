@@ -1,3 +1,7 @@
 # Implementasi Hardware
 
-![fire-smoke-detector-system](../../images/hardware.png)
+![diagram](../../images/rangkaian-diagram.png)
+
+![implementas-hardware](../../images/hardware-implement.jpg)
+
+![implementas-hardware](../../images/hardware-implement2.jpg)

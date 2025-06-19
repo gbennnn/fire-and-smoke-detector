@@ -1,7 +1,7 @@
 # Desain Hardware
 
-![fire-smoke-detector-system](../../images/hardware.png)
+![fire-smoke-detector-system](../../images/rangkaian-diagram.png)
 
 # Desain Software
 
-![web-api-update](../../images/web-api.jpg)
+![web-api-update](../../images/dashboard.png)

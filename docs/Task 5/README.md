@@ -1,3 +1,3 @@
 # Implementasi Software
 
-![web-api-update](../../images/web-api.jpg)
+![web-dashboard](../../images/dashboard.png)
