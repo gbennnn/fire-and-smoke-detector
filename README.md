@@ -1,15 +1,15 @@
-# 🔥 Fire and Smoke Detector
+# Fire and Smoke Detector
 
 Proyek ini merupakan bagian dari tugas kuliah Internet of Things (IoT) yang bertujuan untuk mendeteksi asap dan api menggunakan sensor dan mengirimkan peringatan beserta lokasi melalui internet. Proyek ini juga mendukung Tujuan Pembangunan Berkelanjutan (Sustainable Development Goals / SDG) nomor 11: **Sustainable Cities and Communities**.
 
-## 🎯 Tujuan Proyek
+## Tujuan Proyek
 
 - Mendeteksi asap dan/atau api di lingkungan sekitar menggunakan sensor MQ2 dan flame sensor.
 - Mengirimkan peringatan (alert) ke pengguna secara real-time menggunakan internet.
 - Menyertakan lokasi kejadian melalui integrasi dengan Google Maps API.
 - Mendukung kontrol dan monitoring jarak jauh.
 
-## 📦 Komponen yang Digunakan
+## Komponen yang Digunakan
 
 | Komponen     | Fungsi                                |
 | ------------ | ------------------------------------- |
@@ -20,7 +20,7 @@ Proyek ini merupakan bagian dari tugas kuliah Internet of Things (IoT) yang bert
 | Breadboard   | Perakitan sementara                   |
 | Kabel jumper | Koneksi antar komponen                |
 
-## 🧱 Diagram Sistem Blok
+## Diagram Sistem Blok
 
 Perangkat keras (sensor dan ESP32) → Internet → Pengguna (notifikasi / dashboard)
 ![ilustrasi-sistem](images/ilustrasi-sistem.png)
@@ -41,7 +41,7 @@ Tasks deadline: <br>
 🔳 Task 7 (Pengujian sistem dan penyempurnaan) : 29 Juni 2025 <br>
 🔳 Task 8 (Laporan akhir) via e learning : 6 Juli 2025 <br> -->
 
-## 📜 Lisensi
+## Lisensi
 
 Proyek ini dilisensikan di bawah MIT License. Silakan gunakan dan modifikasi dengan tetap memberikan atribusi.
 
